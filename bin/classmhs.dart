@@ -25,17 +25,12 @@ print("Angkatan : $angkatan");
 class AsistenDosen extends Mahasiswa {
 String mataKuliah;
 AsistenDosen({
-required String nama,
-required String nim,
-required String jurusan,
-required int angkatan,
+required super.nama,
+required super.nim,
+required super.jurusan,
+required super.angkatan,
 required this.mataKuliah,
-}) : super(
-nama: nama,
-nim: nim,
-jurusan: jurusan,
-angkatan: angkatan,
-);
+});
 // Override method
 @override
 void tampilkanData() {
@@ -51,16 +46,11 @@ void daftarMatkul(String matkul);
 class MahasiswaAktif extends Mahasiswa implements Pendaftaran {
 List<String> matkulDiambil = [];
 MahasiswaAktif({
-required String nama,
-required String nim,
-required String jurusan,
-required int angkatan,
-}) : super(
-nama: nama,
-nim: nim,
-jurusan: jurusan,
-angkatan: angkatan,
-);
+required super.nama,
+required super.nim,
+required super.jurusan,
+required super.angkatan,
+});
 
 @override
 void daftarMatkul(String matkul) {
